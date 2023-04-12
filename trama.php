@@ -3,9 +3,13 @@
 for ($i=0; $i < 100 ; $i++) { 
 $data = array('numero_aleatorio' => rand(1, 100)); // Generar número aleatorio
 
-$json = json_encode($data, JSON_PRETTY_PRINT); 
+header('Content-Type: application/json');
+$json = json_encode($data); 
 // Convertir a formato JSON
-echo '<pre>' . $json . '</pre>'; // Imprimir trama JSON
+
+echo '<pre>';
+echo  $json; // Imprimir trama JSON
+echo '</pre>';
 
 ob_flush(); // Limpiar búfer de salida
 flush(); // Enviar contenido al navegador

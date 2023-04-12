@@ -7,9 +7,9 @@ header('Content-Type: application/json');
 $json = json_encode($data); 
 // Convertir a formato JSON
 
-echo '<pre>';
+
 echo  $json; // Imprimir trama JSON
-echo '</pre>';
+
 
 ob_flush(); // Limpiar búfer de salida
 flush(); // Enviar contenido al navegador

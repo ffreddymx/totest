@@ -10,6 +10,9 @@ $json = json_encode($data);
 
 echo  $json; // Imprimir trama JSON
 
+ if ($i < 99) {
+        echo ","; // Agregar coma excepto después del último
+    }
 
 ob_flush(); // Limpiar búfer de salida
 flush(); // Enviar contenido al navegador
